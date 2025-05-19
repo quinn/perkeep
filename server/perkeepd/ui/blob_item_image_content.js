@@ -125,7 +125,7 @@ cam.BlobItemImageContent.getHandler = function(blobref, searchSession, href) {
 	var cci = cam.permanodeUtils.getSingleAttr(m.permanode, 'camliContentImage');
 	if (cci) {
 		var ccim = searchSession.getResolvedMeta(cci);
-		if (ccim && ccim.image) {
+		if (ccim) {
 			return new cam.BlobItemImageContent.Handler(ccim, href, searchSession.getTitle(blobref));
 		}
 	}
