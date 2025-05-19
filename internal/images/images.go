@@ -52,6 +52,7 @@ import (
 	// tiff package must be imported after any image packages that decode
 	// tiff-like formats, i.e. CR2 or DNG
 	_ "golang.org/x/image/tiff"
+	_ "golang.org/x/image/webp"
 )
 
 var ErrHEIC = errors.New("HEIC decoding not implemented yet")
