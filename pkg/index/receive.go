@@ -499,9 +499,6 @@ func (ix *Index) populateFile(ctx context.Context, fetcher blob.Fetcher, b *sche
 		return err
 	}
 	defer fr.Close()
-	if b.BlobRef().String() == "sha224-5d4044834952a7ff53c5a672f2470d130ebd30a6be7a29b122d3abcc" {
-		log.Printf("index: DEBUG: populating file %q", b.FileName())
-	}
 	mimeType, mr := magic.MIMETypeFromReader(fr)
 	if mimeType == "" {
 		mimeType = magic.MIMETypeByExtension(filepath.Ext(b.FileName()))
